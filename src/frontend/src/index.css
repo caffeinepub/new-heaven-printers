@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Deep Indigo primary, Orange accent, White/light gray */
+    --background: 100 0 0;
+    --foreground: 20 0.015 260;
+
+    --card: 98 0.005 260;
+    --card-foreground: 20 0.015 260;
+
+    --popover: 100 0 0;
+    --popover-foreground: 20 0.015 260;
+
+    /* Deep Indigo */
+    --primary: 35 0.18 264;
+    --primary-foreground: 100 0 0;
+
+    /* Orange accent */
+    --accent: 65 0.22 45;
+    --accent-foreground: 100 0 0;
+
+    --secondary: 94 0.01 260;
+    --secondary-foreground: 30 0.04 260;
+
+    --muted: 94 0.008 260;
+    --muted-foreground: 55 0.02 260;
+
+    --destructive: 50 0.25 25;
+    --destructive-foreground: 100 0 0;
+
+    --border: 88 0.01 260;
+    --input: 88 0.01 260;
+    --ring: 35 0.18 264;
+
+    --radius: 0.625rem;
+
+    --chart-1: 35 0.18 264;
+    --chart-2: 65 0.22 45;
+    --chart-3: 55 0.15 160;
+    --chart-4: 70 0.18 320;
+    --chart-5: 60 0.2 200;
+
+    --sidebar: 96 0.005 260;
+    --sidebar-foreground: 20 0.015 260;
+    --sidebar-primary: 35 0.18 264;
+    --sidebar-primary-foreground: 100 0 0;
+    --sidebar-accent: 94 0.01 260;
+    --sidebar-accent-foreground: 30 0.04 260;
+    --sidebar-border: 88 0.01 260;
+    --sidebar-ring: 35 0.18 264;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .btn-orange {
+    @apply bg-accent text-accent-foreground font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity;
+  }
+  .btn-indigo {
+    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-lg hover:opacity-90 transition-opacity;
+  }
+  .section-heading {
+    @apply font-display font-bold text-foreground;
+  }
+}
